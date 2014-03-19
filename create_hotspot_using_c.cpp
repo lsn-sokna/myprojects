@@ -1,4 +1,5 @@
 //this code was compile correctly by Borland C++ 5.02
+//this code works only with Windows 8 and later
 //Coded by Sokna
 
 #include<stdio.h>
@@ -25,7 +26,7 @@ void createHotspot(){
     getch();
     clrscr();
     printf("SSID: %s\n",ssid);
-  goto KEY;
+    goto KEY;
   }else{
     strcpy(command,"netsh wlan set hostednetwork mode=allow ssid=");
     strcat(command,ssid);

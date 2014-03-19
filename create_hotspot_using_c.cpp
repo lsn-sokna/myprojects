@@ -48,7 +48,7 @@ void startHotspot(){
 void stopHotspot(){
   if(status==2){
     system("netsh wlan stop hostednetwork");
-    status=3;
+    //status=3;
   }else if(status==1){
     printf("\nHotspot hasn't started yet.");
   }else if(status==0){

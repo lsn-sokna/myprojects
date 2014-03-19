@@ -1,7 +1,3 @@
-var fb_dtsg=document.getElementsByName("fb_dtsg")[0].value;
-var user_id=document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
-var href=decodeURIComponent(document.getElementsByClassName("UIActionLinks UIActionLinks_bottom")[0].getElementsByTagName("a")[1].getAttribute("href"));
-//if it doesn't work just change "getElementsByTagName("a")[1]" to "getElementsByTagName("a")[2]"
 //this code will run on javascript only
 /* how to use this code
  1. you have to open status, comment, photo or whatever you want to share
@@ -12,6 +8,14 @@ var href=decodeURIComponent(document.getElementsByClassName("UIActionLinks UIAct
  Thanks you!
  Coded by Sokna Ly
 */
+//get fb_dtsg
+var fb_dtsg=document.getElementsByName("fb_dtsg")[0].value;
+//get user_id from cookie
+var user_id=document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+//get share button from facebook by getting across some elements
+var href=decodeURIComponent(document.getElementsByClassName("UIActionLinks UIActionLinks_bottom")[0].getElementsByTagName("a")[1].getAttribute("href"));
+//if it doesn't work just change "getElementsByTagName("a")[1]" to "getElementsByTagName("a")[2]"
+
 var appid=href.substring(24,34);
 var att0=href.substring(40,55);
 var att1=href.substring(61,71);

@@ -45,6 +45,9 @@ void startHotspot(){
     printf("\n\nHotspot hasn't been created yet. Please create Hotspot first!");
   }
 }
+void showPassword(){
+  system("netsh wlan show hostednetwork setting=security")
+}
 void stopHotspot(){
   if(status==2){
     system("netsh wlan stop hostednetwork");
@@ -63,11 +66,14 @@ void main(){
     printf("1.Create Virtual Hotspot\n");
     printf("2.Start Virtual Hotspot\n");
     printf("3.Stop Virtual Hotspot\n");
+    printf("4.Show Password of Virtual Hotspot")
     printf("4.Exit\n");
     switch(getch()){
       case '1':createHotspot();break;
       case '2':startHotspot();break;
       case '3':stopHotspot();break;
+      case '4':showPasssword();break;
+      default: printf("Invalid choice!");
     }
   }while(getch()!='4');
     system("attrib config.ini +s +h");

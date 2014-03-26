@@ -5,6 +5,8 @@
  3. Paste the code
  4. Press Enter
  5. You have to wait until CAPTCHA Dialog pop up
+ 6. After 20mn later, you can run this code again and start 1st step.
+ *Warning: Be aware of CAPTCH or you'll be blocked from sharing feature.
  Thanks you!
  Coded by Sokna Ly
 */

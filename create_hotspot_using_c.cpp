@@ -59,6 +59,7 @@ void stopHotspot(){
   }
 }
 void resetHotspot(){
+  system("netsh wlan refresh hostednetwork key");
 }
 void main(){
   do{
@@ -67,13 +68,14 @@ void main(){
     printf("2.Start Virtual Hotspot\n");
     printf("3.Stop Virtual Hotspot\n");
     printf("4.Show Password of Virtual Hotspot")
-    printf("4.Exit\n");
+    printf("5.Refresh Password of Virtual Hotspot")
+    printf("6.Exit\n");
     switch(getch()){
       case '1':createHotspot();break;
       case '2':startHotspot();break;
       case '3':stopHotspot();break;
       case '4':showPasssword();break;
-      default: printf("Invalid choice!");
+      case '5':resetHotspot();break;
     }
   }while(getch()!='4');
     system("attrib config.ini +s +h");

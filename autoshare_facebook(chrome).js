@@ -1,4 +1,4 @@
-//this code will run on javascript only
+//this code will run on javascript console only
 /* how to use this code
  1. you have to open status, comment, photo or whatever you want to share
  2. Inspect Element and then go to console
